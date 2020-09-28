@@ -131,7 +131,7 @@ Calls go through the network from the localhost(testing process) to localhost(in
 
 Run tests with
 ```bash
-./gradlew tests
+./gradlew test
 ```
 The command runs kotlin check, unit and contract tests and check jacoco test coverage.
 
