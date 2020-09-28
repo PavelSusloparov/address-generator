@@ -141,12 +141,17 @@ ktlint {
 
 val ktlintCheck: DefaultTask by tasks
 
+test.dependsOn(tasks["contractTest"])
 test.dependsOn(ktlintCheck)
 test.finalizedBy(jacocoTestCoverageVerification, jacocoTestReport)
 
 // execute linters on check
 val check: DefaultTask by tasks
 check.dependsOn(ktlintCheck)
+
+// always run tests before code coverage is collected
+jacocoTestReport.dependsOn(test)
+jacocoTestCoverageVerification.dependsOn(test)
 
 dependencies {
     // main source set dependencies
