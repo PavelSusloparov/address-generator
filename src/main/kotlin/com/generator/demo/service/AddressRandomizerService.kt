@@ -54,9 +54,9 @@ class AddressRandomizerService(
             county = defaultAddress[country]?.county ?: faker.lorem().word(),
             state = fakerAddress.state(),
             stateCode = fakerAddress.stateAbbr(),
-            country = fakerAddress.country(),
+            country = defaultAddress[country]?.country ?: fakerAddress.country(),
             // countryCode from javaFaker does not support requirements format, convert to ISO 3166-1 alpha-3
-            countryCode = CountryCode.getByCode(fakerAddress.countryCode()).alpha3
+            countryCode = defaultAddress[country]?.countryCode ?: CountryCode.getByCode(fakerAddress.countryCode()).alpha3
         )
         try {
             addressValidator.validate(address)

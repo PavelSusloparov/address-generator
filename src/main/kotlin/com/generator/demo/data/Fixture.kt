@@ -16,10 +16,10 @@ class Fixture {
                 street = "Cummerata Court",
                 postalCode = "07354-5466",
                 city = "South Michaele",
-                county = "Autauga",
+                county = "North Bergen",
                 state = "South Carolina",
                 stateCode = "MT",
-                country = "United States",
+                country = "United States Of America",
                 countryCode = "USA"
             )
 
@@ -32,7 +32,7 @@ class Fixture {
                 state = "Alberta",
                 stateCode = "AB",
                 country = "Canada",
-                countryCode = "LVA"
+                countryCode = "CND"
             )
 
             fun mexico() = Address(
@@ -55,8 +55,8 @@ class Fixture {
                 county = "Holland",
                 state = "Zuid-Holland",
                 stateCode = "MS",
-                country = "Atlantische Oceaan",
-                countryCode = "NED"
+                country = "Netherlands",
+                countryCode = "NLD"
             )
         }
     }
